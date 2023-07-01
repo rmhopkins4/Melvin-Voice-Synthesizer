@@ -39,3 +39,5 @@ def combine_wav_files(input_files, output_file):
 # Example usage
 ipa_input = input("Input IPA transcription: ")
 build_file(ipa_input)
+
+# TEST COMMIT COMMENT
