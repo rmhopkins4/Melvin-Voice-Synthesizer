@@ -1,4 +1,5 @@
 {
+  " ": "sounds/wait.wav",
   "i": "sounds/vowels/close_front_unrounded.wav",
   "y": "sounds/vowels/close_front_rounded.wav",
   "ɨ": "sounds/vowels/close_central_unrounded.wav",
@@ -58,7 +59,8 @@
   "q": "",
   "ɢ": "",
   "ʡ": "",
-  "ʔ": "",
+  "ʔ": "sounds/consonants/glottal_stop.wav",
+  "'": "sounds/consonants/glottal_stop.wav",
   "t̪s̪": "",
   "d̪z̪": "",
   "ts": "",

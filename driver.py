@@ -19,9 +19,13 @@ def build_file(string):
         elif string[i] in audio_mapping:
             input_files.append(audio_mapping[string[i]])
             
-    combine_wav_files(input_files=input_files, output_file=Path(__file__).resolve().parent / 'output.wav') # save in the script's directory 
+    # add wait to the end for buffer (sometimes sounds get clipped at the end)
+    input_files.append(audio_mapping[" "])
+    
+    # combine and save file
+    __combine_wav_files(input_files=input_files, output_file=Path(__file__).resolve().parent / 'output.wav') # save in the script's directory 
             
-def combine_wav_files(input_files, output_file):
+def __combine_wav_files(input_files, output_file):
     # open the first input file to get audio parameters
     with wave.open(input_files[0], 'rb') as first_file:
         params = first_file.getparams()
