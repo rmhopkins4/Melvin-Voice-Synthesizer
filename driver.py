@@ -10,7 +10,8 @@ with open('audio_mapping.json', 'r', encoding='utf-8') as file:
     audio_mapping = json.loads(file.read())
 
 def build_file(string):
-    input_files = []
+    # add wait to the start for buffer (sometimes sounds get clipped at the start)
+    input_files = [audio_mapping[" "]]
     
     # build input files
     for i in range(len(string)):
